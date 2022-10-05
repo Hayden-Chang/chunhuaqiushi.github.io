@@ -118,18 +118,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -158,6 +158,131 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/05/git%E4%BF%AE%E6%94%B9%E5%8E%86%E5%8F%B2commit-md/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hayden">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="Enjoy Life!">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/05/git%E4%BF%AE%E6%94%B9%E5%8E%86%E5%8F%B2commit-md/" class="post-title-link" itemprop="url">git修改历史commit.md</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-05 11:36:36 / Modified: 12:04:20" itemprop="dateCreated datePublished" datetime="2022-10-05T11:36:36+08:00">2022-10-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>目的：修改commit 14的文件和commit message</p>
+<ol>
+<li><p>添加commit</p>
+<ol>
+<li><code>vim 14.txt</code></li>
+<li><code>git add 14.txt</code></li>
+<li><code>git commit -m &quot;14&quot;</code></li>
+<li><code>vim 15.txt</code></li>
+<li><code>git add 15.txt</code></li>
+<li><code>git commit -m &quot;15&quot;</code></li>
+<li><code>vim 16.txt</code></li>
+<li><code>git add 16.txt</code></li>
+<li><code>git commit -m &quot;16&quot;</code></li>
+</ol>
+</li>
+<li><p>将代码推送到远程仓库: <code>git push</code></p>
+</li>
+<li><p>查看历史提交记录: <code>git log</code>:</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">commit e44e19ae40a237eb79c979be90e29c2e416b6414 (HEAD -&gt; main, origin/m</span><br><span class="line">ain)</span><br><span class="line">Author: haichao.zhang &lt;haichao.zhang@momenta.ai&gt;</span><br><span class="line">Date:   Wed Oct 5 11:09:40 2022 +0800</span><br><span class="line"></span><br><span class="line">    16</span><br><span class="line"></span><br><span class="line">commit 534f6e17db76010959c7b0a6dbaee813eafc84ce</span><br><span class="line">Author: haichao.zhang &lt;haichao.zhang@momenta.ai&gt;</span><br><span class="line">Date:   Wed Oct 5 11:09:24 2022 +0800</span><br><span class="line"></span><br><span class="line">    15</span><br><span class="line"></span><br><span class="line">commit eb7adcbac440735d7152b2cdc5fd3f8e42ca3d2b</span><br><span class="line">Author: haichao.zhang &lt;haichao.zhang@momenta.ai&gt;</span><br><span class="line">Date:   Wed Oct 5 11:09:04 2022 +0800</span><br><span class="line"></span><br><span class="line">    14</span><br><span class="line"></span><br><span class="line">commit 2b1dfcb4ee2f99cefde134dcaba3a54984af7c1a</span><br><span class="line">Merge: 5d7182e 56891cf</span><br><span class="line">Author: haichao.zhang &lt;haichao.zhang@momenta.ai&gt;</span><br><span class="line">Date:   Wed Oct 5 11:05:00 2022 +0800</span><br><span class="line"></span><br><span class="line">    merge</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>以交互的方式选择要修改的commit<code>eb7adcbac440735d7152b2cdc5fd3f8e42ca3d2b</code></p>
+<ol>
+<li><p><code>git rebase -i eb7adcbac440735d7152b2cdc5fd3f8e42ca3d2b</code></p>
+<p> result:</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"> 1 pick eb7adcb 14</span><br><span class="line"> 2 pick 534f6e1 15</span><br><span class="line"> 3 pick e44e19a 16</span><br><span class="line"> 4</span><br><span class="line"> 5 # Rebase 2b1dfcb..e44e19a onto 2b1dfcb (3 commands)</span><br><span class="line"> 6 #</span><br><span class="line"> 7 # Commands:</span><br><span class="line"> 8 # p, pick &lt;commit&gt; = use commit</span><br><span class="line"> 9 # r, reword &lt;commit&gt; = use commit, but edit the commit message</span><br><span class="line">10 # e, edit &lt;commit&gt; = use commit, but stop for amending</span><br><span class="line">11 # s, squash &lt;commit&gt; = use commit, but meld into previous commit</span><br><span class="line">12 # f, fixup [-C | -c] &lt;commit&gt; = like &quot;squash&quot; but keep only the previous</span><br><span class="line">13 #                    commit&#x27;s log message, unless -C is used, in which case</span><br><span class="line">14 #                    keep only this commit&#x27;s message; -c is same as -C but</span><br><span class="line">15 #                    opens the editor</span><br><span class="line">16 # x, exec &lt;command&gt; = run command (the rest of the line) using shell</span><br><span class="line">17 # b, break = stop here (continue rebase later with &#x27;git rebase --continue&#x27;)</span><br><span class="line">18 # d, drop &lt;commit&gt; = remove commit</span><br><span class="line">19 # l, label &lt;label&gt; = label current HEAD with a name</span><br><span class="line">20 # t, reset &lt;label&gt; = reset HEAD to a label</span><br><span class="line">21 # m, merge [-C &lt;commit&gt; | -c &lt;commit&gt;] &lt;label&gt; [# &lt;oneline&gt;]</span><br><span class="line">22 # .       create a merge commit using the original merge commit&#x27;s</span><br><span class="line">23 # .       message (or the oneline, if no original merge commit was</span><br><span class="line">24 # .       specified); use -c &lt;commit&gt; to reword the commit message</span><br><span class="line">25 #</span><br><span class="line">26 # These lines can be re-ordered; they are executed from top to bottom.</span><br><span class="line">27 #</span><br><span class="line">28 # If you remove a line here THAT COMMIT WILL BE LOST.</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>将第一行的<code>pick eb7adcb 14</code>改为<code>edit eb7adcb 14</code>，输入<code>wq</code>保存退出。此时终端变成: <code>~/p/practice-git @eb7adcba rebase-i 1/3 &gt;</code></p>
+</li>
+</ol>
+</li>
+<li><p>输入 <code>vim 14.txt</code>，在文件的最下面加一行<code>xxxxxxxxxxxxxxxx</code>。(模拟对文件的修改)</p>
+</li>
+<li><p>输入<code>git add 14.txt</code>，将文件加入到暂存区。</p>
+</li>
+<li><p>输入<code>git commit --amend</code>，result如下</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">1 COMMIT_EDITMSG                                                                                                               Buffers</span><br><span class="line"> 1 14</span><br><span class="line"> 2</span><br><span class="line"> 3 # Please enter the commit message for your changes. Lines starting</span><br><span class="line"> 4 # with &#x27;#&#x27; will be ignored, and an empty message aborts the commit.</span><br><span class="line"> 5 #</span><br><span class="line"> 6 # Date:      Wed Oct 5 11:09:04 2022 +0800</span><br><span class="line"> 7 #</span><br><span class="line"> 8 # interactive rebase in progress; onto 2b1dfcb</span><br><span class="line"> 9 # Last command done (1 command done):</span><br><span class="line">10 #    edit eb7adcb 14</span><br><span class="line">11 # Next commands to do (2 remaining commands):</span><br><span class="line">12 #    pick 534f6e1 15</span><br><span class="line">13 #    pick e44e19a 16</span><br><span class="line">14 # You are currently editing a commit while rebasing branch &#x27;main&#x27; on &#x27;2b1dfcb&#x27;.</span><br><span class="line">15 #</span><br><span class="line">16 # Changes to be committed:</span><br><span class="line">17 #       new file:   14.txt</span><br><span class="line">18 #</span><br></pre></td></tr></table></figure>
+
+<p> 将第三行的<code>14</code>改为<code>14-x</code>，输入<code>wq</code>保存退出。此时终端变成<code>~/p/practice-git @2a24d213 rebase-i 1/3 &gt;</code>。(模拟对commit-message的修改)</p>
+</li>
+<li><p>输入<code>git rebase --continue</code>，使head指向此分支的最新commit。此时终端变成<code>~/practise/practice-git main &lt;3&gt;3 &gt;</code></p>
+</li>
+<li><p>输入<code>git push -f</code>，将代码推送到远程仓库。（加-f的目的是强制使远程仓库是用本地仓库提交的结果，否则git不知道到底要对14.txt文件使用哪一次的结果。所以如果commit已经推送到了远程仓库，一定要加<code>-f</code>；如果commit还未推送到远程仓库，不需要要加<code>-f</code>）</p>
+</li>
+<li><p>注意：在使用<code>git rebase --continue</code>命令时，可能会遇到各种各样的问题。需要问题后再补充。</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -330,7 +455,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-04 16:30:10 / Modified: 16:57:27" itemprop="dateCreated datePublished" datetime="2022-10-04T16:30:10+08:00">2022-10-04</time>
+      <time title="Created: 2022-10-04 16:30:10 / Modified: 17:35:24" itemprop="dateCreated datePublished" datetime="2022-10-04T16:30:10+08:00">2022-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -395,215 +520,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/04/test-1004-12-md/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Hayden">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Enjoy Life!">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/04/test-1004-12-md/" class="post-title-link" itemprop="url">test-1004_12.md</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-10-04 14:52:52 / Modified: 15:27:17" itemprop="dateCreated datePublished" datetime="2022-10-04T14:52:52+08:00">2022-10-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>sdfffffffffffff<br>44444444444444444f<br>010101010101<br>55555555555555555<br>123456<br>1111111111</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/04/test-1004-11-md/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Hayden">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Enjoy Life!">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/04/test-1004-11-md/" class="post-title-link" itemprop="url">test-1004_11.md</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-10-04 14:52:22 / Modified: 15:40:29" itemprop="dateCreated datePublished" datetime="2022-10-04T14:52:22+08:00">2022-10-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>i111111111111111111<br>sdfsdf<br>sdfsf<br>1111111111111111111111<br>9999999999<br>0000000000000<br>wwwwwwwwwwwwwwwwww<br>sssssssssssss</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/04/test-1004-10-md/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Hayden">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Enjoy Life!">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/04/test-1004-10-md/" class="post-title-link" itemprop="url">test-1004_10.md</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-10-04 14:49:36 / Modified: 14:51:26" itemprop="dateCreated datePublished" datetime="2022-10-04T14:49:36+08:00">2022-10-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/04/hexo%E9%85%8D%E7%BD%AE-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -634,7 +550,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-04 14:35:22 / Modified: 15:49:47" itemprop="dateCreated datePublished" datetime="2022-10-04T14:35:22+08:00">2022-10-04</time>
+      <time title="Created: 2022-10-04 14:35:22 / Modified: 15:47:36" itemprop="dateCreated datePublished" datetime="2022-10-04T14:35:22+08:00">2022-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -683,7 +599,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/04/test-1004-9-md/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/04/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -701,7 +617,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/04/test-1004-9-md/" class="post-title-link" itemprop="url">test-1004_9.md</a>
+          <a href="/2022/10/04/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
         </h2>
 
         <div class="post-meta-container">
@@ -711,9 +627,21 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-10-04 14:19:19 / Modified: 14:34:25" itemprop="dateCreated datePublished" datetime="2022-10-04T14:19:19+08:00">2022-10-04</time>
+      <time title="Created: 2022-10-04 14:11:00" itemprop="dateCreated datePublished" datetime="2022-10-04T14:11:00+08:00">2022-10-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Sports/" itemprop="url" rel="index"><span itemprop="name">Sports</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Sports/Baseball/" itemprop="url" rel="index"><span itemprop="name">Baseball</span></a>
+        </span>
     </span>
 
   
@@ -726,7 +654,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start">0.1 Quick Start</h2><h3 id="Create-a-new-post">0.1.1 Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server">0.1.2 Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files">0.1.3 Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites">0.1.4 Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
       
     </div>
 
@@ -752,7 +693,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/04/test-1004-8-md/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/01/git-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -770,7 +711,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/04/test-1004-8-md/" class="post-title-link" itemprop="url">test-1004_8.md</a>
+          <a href="/2022/10/01/git-md/" class="post-title-link" itemprop="url">git.md</a>
         </h2>
 
         <div class="post-meta-container">
@@ -781,7 +722,23 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-10-04 14:11:48" itemprop="dateCreated datePublished" datetime="2022-10-04T14:11:48+08:00">2022-10-04</time>
+      <time title="Created: 2022-10-01 22:08:28" itemprop="dateCreated datePublished" datetime="2022-10-01T22:08:28+08:00">2022-10-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-10-05 11:36:22" itemprop="dateModified" datetime="2022-10-05T11:36:22+08:00">2022-10-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
     </span>
 
   
@@ -794,7 +751,130 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <ul>
+<li><p><code>git rebase [branch-name]/[commit-id] </code></p>
+<ul>
+<li><p>将当前分支rebase到xxx分支上，head仍然指向的是当前分支。</p>
+</li>
+<li><p>也可以直接rebase到某次commit上</p>
+</li>
+<li><p>疑问</p>
+<ul>
+<li>head指向的哪一个commit?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>git checkout</code></p>
+<ul>
+<li><code>git checkout commit-id/branch-name </code></li>
+</ul>
+<p>  head 直接指向commit-id，或</p>
+<ul>
+<li><code>git checkout branch-name^ </code></li>
+</ul>
+<p>  切换到branch-name分支最新commit的父节点</p>
+<ul>
+<li><code>git checkout branch-name^^ </code></li>
+</ul>
+<p>  切换到branch-name分支最新commit的父父节点</p>
+</li>
+<li><p><code>git branch -f [branch-name] [commit-id]</code></p>
+<ul>
+<li>将某个branch-name指向某次commit-id</li>
+</ul>
+</li>
+<li><p><code>git reset [commit-id]</code></p>
+<ul>
+<li>将当前分支指向某个commit</li>
+</ul>
+</li>
+<li><p><code>git revert [commit-id]</code></p>
+<ul>
+<li>回退某次commit-id</li>
+</ul>
+</li>
+<li><p><code>git rebase -i [commit-id]</code></p>
+<ul>
+<li>以交互式的方式将当前分支rebase到某次提交上</li>
+</ul>
+</li>
+<li><p><code>git cherry-pick [commit-id-1] [commit-id-2] ......</code></p>
+<ul>
+<li>在当前分支下面加入commit-id-1和commit-id-2</li>
+</ul>
+</li>
+<li><p><code>git commit -amend</code></p>
+<ul>
+<li>在当前的commit-id中进行一些修改，合并到当前的commit-id中</li>
+</ul>
+</li>
+<li><p><code>git tag [tag-name] [commit-id]</code></p>
+<ul>
+<li>给某个commit打标签，可以使用<code>git checkout [tag-name]</code>切换到某个标签上</li>
+</ul>
+</li>
+<li><p><code>git fetch</code></p>
+<ul>
+<li>更新本地的远程分支</li>
+</ul>
+</li>
+<li><p><code>git pull</code></p>
+<ul>
+<li>等价于<code>git fetch</code> + <code>git merge</code></li>
+</ul>
+</li>
+<li><p><code>git pull --rebase</code></p>
+<ul>
+<li>等价于<code>git fetch</code> + <code>git rebase</code></li>
+</ul>
+</li>
+<li><p><code>git checkout -b [branch-name] [origin-branch-name] </code></p>
+<ul>
+<li>跟踪远程分支</li>
+</ul>
+</li>
+<li><p><code>git branch -u [origin-branch-name]  [branch-name]</code></p>
+<ul>
+<li>跟踪远程分支</li>
+</ul>
+</li>
+<li><p><code>git push origin [branch-name]</code></p>
+<ul>
+<li>将branch-name的commit推送到远程仓库，同时指定了提交记录的来源和去向</li>
+</ul>
+</li>
+<li><p><code>git push origin [source]:[destination]</code></p>
+<ul>
+<li>将本地源分支推送到目的远程分支</li>
+<li>tip: source是本地的，destination是远程的</li>
+</ul>
+</li>
+<li><p><code>git fetch origin [source]:[destination]</code></p>
+<ul>
+<li>将远程分支的提交下载到本地分支</li>
+<li>tip: source是远程的，destination是本地的</li>
+<li><code>git fetch origin :[destination]</code><ul>
+<li>在本地新建destination分支</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>git pull origin [source]:[destination]</code></p>
+<ul>
+<li>相当于两步操作：<code>git fetch origin [source]:[destination]</code> + <code>git merge [destination]</code></li>
+</ul>
+</li>
+<li><p>！！！危险操作</p>
+<ul>
+<li><code>git push origin :foo</code><ul>
+<li>删除远程的foo分支</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
 
@@ -820,7 +900,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/04/test-1004-7-md/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/24/%E8%80%81%E5%8F%8B%E8%AE%B0%E8%AF%8D%E6%B1%87-1-1-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -838,7 +918,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/04/test-1004-7-md/" class="post-title-link" itemprop="url">test-1004_7.md</a>
+          <a href="/2022/09/24/%E8%80%81%E5%8F%8B%E8%AE%B0%E8%AF%8D%E6%B1%87-1-1-md/" class="post-title-link" itemprop="url">老友记词汇_1_1.md</a>
         </h2>
 
         <div class="post-meta-container">
@@ -849,7 +929,23 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-10-04 13:47:24" itemprop="dateCreated datePublished" datetime="2022-10-04T13:47:24+08:00">2022-10-04</time>
+      <time title="Created: 2022-09-24 20:03:29" itemprop="dateCreated datePublished" datetime="2022-09-24T20:03:29+08:00">2022-09-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-10-04 14:11:00" itemprop="dateModified" datetime="2022-10-04T14:11:00+08:00">2022-10-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%8B%B1%E8%AF%AD/" itemprop="url" rel="index"><span itemprop="name">英语</span></a>
+        </span>
     </span>
 
   
@@ -862,7 +958,80 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <ul>
+<li>hump 驼背</li>
+<li>hair piece 假发</li>
+<li>chalk 粉笔</li>
+<li>cafeteria 食堂</li>
+<li>all of a sudden 突然</li>
+<li>weird 奇怪</li>
+<li>reach down my thoat 伸入我的喉咙</li>
+<li>swettie 亲爱的</li>
+<li>grab 抓住</li>
+<li>intestine 小肠</li>
+<li>aura 光环</li>
+<li>fixate 固执于，痴迷于</li>
+<li>les</li>
+<li>strip joints 脱衣舞厅</li>
+<li>hammer 锤子</li>
+<li>decaf 无咖啡因的</li>
+<li>bridemaid 伴娘</li>
+<li>gravy boat 肉汁壶</li>
+<li>gourgeous 漂亮的 </li>
+<li>be turned on 被…激发性欲</li>
+<li>freak out 吓呆</li>
+<li>have drifted apart 有点疏远了</li>
+<li>pipe organ 管风琴</li>
+<li>purse 包包</li>
+<li>metaphor 比喻</li>
+<li>calm 平静的</li>
+<li>dear diary 可以写入日记的</li>
+<li>eyelash 眼睫毛</li>
+<li>what are you up to?你打算做什么</li>
+<li>honeymoon 蜜月</li>
+<li>hang out here 留在这里</li>
+<li>bracket 支架；括号</li>
+<li>worm guys 螺丝</li>
+<li>bookcase 书架</li>
+<li>beer 啤酒</li>
+<li>stereo 音响</li>
+<li>projector 投影仪</li>
+<li>you are screwed 你被坑了</li>
+<li>idiot 白痴</li>
+<li>catch on 心中有数</li>
+<li>rocky road 巧克力蛋糕</li>
+<li>cookie dough 曲奇</li>
+<li>jimmies 糖果颗粒；巧克力碎</li>
+<li>nut 果仁</li>
+<li>whipped cream 发泡鲜奶油</li>
+<li>grab a spoon 抓住机会</li>
+<li>horny 性兴奋的</li>
+<li>freezer 冰箱</li>
+<li>walk out of on 遗弃</li>
+<li>spit on 吐口水</li>
+<li>smash 粉碎</li>
+<li>get it together enough 鼓足勇气</li>
+<li>on a roll 运气好</li>
+<li>rerun’s production of xxx xxx的重播</li>
+<li>I will not take this abuse 别这么侮辱人</li>
+<li>hanger 撑衣架</li>
+<li>I take credit for xxx xxx欠我一个人情 </li>
+<li>no snap 没有做爱</li>
+<li>sophisticated 复杂的</li>
+<li>some sort of beacon 一种特殊的信号</li>
+<li>surprisingly upbeat 非常兴奋</li>
+<li>live off your parents 靠你爸妈</li>
+<li>albino 患白化病的人</li>
+<li>windshield 挡风玻璃</li>
+<li>aromatherapy 芳香治疗</li>
+<li>it sucks 很烂</li>
+<li>major crush on 暗恋</li>
+<li>geeky 土头土脑的</li>
+<li>vulnerability 脆弱</li>
+<li>what is the deal 怎么回事？</li>
+<li>hormones 激情</li>
+</ul>
+
       
     </div>
 
@@ -888,7 +1057,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/04/test-1004-6-md/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/08/%E4%B8%93%E4%B8%9A%E8%AF%8D%E6%B1%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -906,7 +1075,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/04/test-1004-6-md/" class="post-title-link" itemprop="url">test-1004_6.md</a>
+          <a href="/2022/09/08/%E4%B8%93%E4%B8%9A%E8%AF%8D%E6%B1%87/" class="post-title-link" itemprop="url">专业词汇</a>
         </h2>
 
         <div class="post-meta-container">
@@ -917,7 +1086,23 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-10-04 13:42:05" itemprop="dateCreated datePublished" datetime="2022-10-04T13:42:05+08:00">2022-10-04</time>
+      <time title="Created: 2022-09-08 16:03:27" itemprop="dateCreated datePublished" datetime="2022-09-08T16:03:27+08:00">2022-09-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-10-04 14:11:00" itemprop="dateModified" datetime="2022-10-04T14:11:00+08:00">2022-10-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%8B%B1%E8%AF%AD/" itemprop="url" rel="index"><span itemprop="name">英语</span></a>
+        </span>
     </span>
 
   
@@ -930,7 +1115,303 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <h1 id="货运">1 货运</h1><ul>
+<li>freight forwarding 货运代理</li>
+<li>transloads 装载量</li>
+<li>courier 快递员；快递公司</li>
+<li>parcel 包裹</li>
+<li>shipper 发货人；运货商</li>
+<li>consignee 收货人</li>
+<li>cargo 货物</li>
+<li>logistics 物流；后勤</li>
+<li>consolidation 托运</li>
+<li>steamship 轮船</li>
+<li>steamship line 轮船公司；轮船航线</li>
+<li>vessel 船</li>
+<li>NOVCC non-vessel owning common carrier</li>
+<li>broker 经理人</li>
+<li>customs broker 海关代理人；报关员</li>
+<li>agent 代理人</li>
+<li>transmit customs entries 发送报关手续</li>
+<li>regulatory agencies 监管机构</li>
+<li>DHL 一个快递公司</li>
+<li>UPS 一个快递公司</li>
+<li>FedEx 一个快递公司，联邦快递</li>
+<li>business units 业务单位</li>
+<li>containerized freight 集装箱的货物</li>
+<li>palletized freight 托盘化的货物</li>
+<li>competitor 竞争者</li>
+<li>origin point 起点</li>
+<li>shipper’s letter of instruction 国际货物托运书</li>
+<li>bill of lading 提货单</li>
+<li>certificate of origin 原产地证书</li>
+<li>contract of carriage 运货合同</li>
+<li>hurdle 障碍，难关</li>
+<li>pop up 突然出现</li>
+<li>international presence 国际业务</li>
+<li>liquor 酒类；液体</li>
+<li>perishable 易腐食物</li>
+<li>hazardous 危险的，有害的</li>
+<li>Key principles 基本原则</li>
+<li>untangle 解决</li>
+<li>step back 后退一步</li>
+<li>dial v 拨；n 表盘</li>
+<li>SCM supply chain management</li>
+<li>commodity 日用品</li>
+<li>low margin 低利润</li>
+<li>umbrella term 涵盖性术语</li>
+<li>military logistics 军事后勤</li>
+<li>multimodal 多模式的</li>
+<li>reap 收获</li>
+<li>leverage 发挥杠杆作用；充分利用</li>
+<li>inventory 存货；详细目录；存货清单</li>
+<li>accounts for 占比</li>
+<li>staggering 令人吃惊的</li>
+<li>estimate 估计</li>
+<li>warehousing v&#x2F;n 仓储</li>
+<li>procurement 采购</li>
+<li>sophisticated 见多识广的；复杂的</li>
+<li>aluminum 铝</li>
+<li>panel 面板；仪表盘</li>
+<li>tied up 捆绑</li>
+<li>comparatively 相对地；比较来说</li>
+<li>methodology 方法论</li>
+<li>labor 劳动；人工</li>
+<li>spawn 引起</li>
+<li>kick off 开始</li>
+<li>notably 特别；非常</li>
+<li>apparel 服装；衣服</li>
+<li>margin 利润</li>
+<li>demand management 需求管理</li>
+<li>revision 修订</li>
+<li>ripe 时机成熟的</li>
+<li>launch 发射；上市</li>
+<li>colorway 配色</li>
+<li>trends are emerging 趋势正在出现</li>
+<li>trade barriers are falling 贸易壁垒正在下降</li>
+<li>specialized 专业的</li>
+<li>outsized share of the market 巨大的市场份额</li>
+<li>resiliency 弹性；精神恢复</li>
+<li>gross 总共的</li>
+<li>corporate 公司的</li>
+<li>tremendous 巨大的</li>
+<li>evolve 进化</li>
+<li>ERP enterprise resoursing planning</li>
+<li>geopolitical alignment 地缘政治联合</li>
+<li>superpower 超级大国</li>
+<li>hearken 倾听</li>
+<li>belt and road initiative 一带一路</li>
+<li>vulnerable 脆弱的</li>
+<li>emphasis 重视；强调</li>
+<li>transatlantic 横渡大西洋的</li>
+<li>contingency 意外事件</li>
+</ul>
+<h1 id="自然">2 自然</h1><ul>
+<li>eruption 喷发</li>
+<li>volcano 火山</li>
+</ul>
+<h1 id="行政">3 行政</h1><ul>
+<li>reimbursement 报销</li>
+<li>oversee 监督</li>
+<li>key takeaways 关键点</li>
+<li>assets 资产</li>
+<li>fall into 分成</li>
+<li>legal catagory 法律类别</li>
+<li>et cetera 等等</li>
+<li>borrow 借用</li>
+<li>contract 合同</li>
+</ul>
+<h1 id="计算机">4 计算机</h1><ul>
+<li>academic realm 学术层面</li>
+</ul>
+<h1 id="其他">5 其他</h1><p>elevate 提高</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/18/%E5%B7%A5%E5%85%B7%E6%B1%87%E6%80%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hayden">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="Enjoy Life!">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/08/18/%E5%B7%A5%E5%85%B7%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">工具汇总</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-08-18 08:24:15" itemprop="dateCreated datePublished" datetime="2022-08-18T08:24:15+08:00">2022-08-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-10-04 14:11:00" itemprop="dateModified" datetime="2022-10-04T14:11:00+08:00">2022-10-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E5%85%B7%E6%B1%87%E6%80%BB/" itemprop="url" rel="index"><span itemprop="name">工具汇总</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="IDE">0.1 IDE</h2><h1 id="视频工具">1 视频工具</h1><h1 id="开发工具">2 开发工具</h1><h1 id="工具网站">3 工具网站</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://xclient.info/?_=cc838b855cfdd295e18d78faafcc4614">https://xclient.info/?_=cc838b855cfdd295e18d78faafcc4614</a> </li>
+<li></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/18/hexo%E6%96%87%E6%A1%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hayden">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="Enjoy Life!">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/08/18/hexo%E6%96%87%E6%A1%A3/" class="post-title-link" itemprop="url">hexo文档</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-08-18 06:56:31" itemprop="dateCreated datePublished" datetime="2022-08-18T06:56:31+08:00">2022-08-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-10-04 14:11:00" itemprop="dateModified" datetime="2022-10-04T14:11:00+08:00">2022-10-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="命令">1 命令</h1><h1 id="学习资料">2 学习资料</h1><ul>
+<li>官网：<a target="_blank" rel="noopener" href="https://hexo.io/">https://hexo.io/</a></li>
+<li>视频教程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1q741167PJ?p=9">https://www.bilibili.com/video/BV1q741167PJ?p=9</a></li>
+<li>hexo+github: <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">https://zhuanlan.zhihu.com/p/26625249</a></li>
+<li>主题相关：<ul>
+<li>next主题：<a target="_blank" rel="noopener" href="https://theme-next.js.org/">https://theme-next.js.org/</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="常见问题">3 常见问题</h1><h2 id="next主题配置文件位置">3.1 next主题配置文件位置</h2><p>node_modules&#x2F;hexo-theme-next&#x2F;_config.yml</p>
+<h2 id="next主题取消自动标题编号">3.2 next主题取消自动标题编号</h2><p>将next主题配置文件的toc:number设为false</p>
+<h2 id="hexo使用自动标题编号">3.3 hexo使用自动标题编号</h2><p>在 Hexo 中，使用了一个 hexo 的插件， Hexo 根目录执行下面的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-heading-index --save</span><br><span class="line"></span><br><span class="line">然后在 Hexo 根目录的 _config.yml 最后加上下面的配置:</span><br><span class="line"></span><br><span class="line">heading_index:</span><br><span class="line">  enable: true</span><br><span class="line">  index_styles: &quot;&#123;1&#125; &#123;1&#125; &#123;1&#125; &#123;1&#125; &#123;1&#125; &#123;1&#125;&quot;</span><br><span class="line">  connector: &quot;.&quot;</span><br><span class="line">  global_prefix: &quot;&quot;</span><br><span class="line">  global_suffix: &quot; &quot;</span><br><span class="line">  </span><br><span class="line">重新生成即可。</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
 
@@ -949,7 +1430,7 @@
 
 
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
