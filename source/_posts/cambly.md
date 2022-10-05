@@ -51,6 +51,7 @@ prepare
 new
 
 - artist
+- disassemble
 - pwc - pricewaterhousecoopers Company
 - if you don't use it ,you may lose it.
 - water aerobics
