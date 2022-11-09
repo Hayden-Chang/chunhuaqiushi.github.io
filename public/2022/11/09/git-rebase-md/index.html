@@ -20,25 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Enjoy Life!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/tags/%E4%BF%AE%E6%94%B9/index.html">
+    <meta name="description" content="issue:  执行git pull origin master --rebase后发生冲突，开始解冲突，发现写的很多代码都没了。  reason:  rebase是一个一个commit执行的，前面的commit会有一些代码没有，正常现象  解决: git rebase --abort退出，可完全回到rebase之前的状态，即使没解完冲突也没关系。 将多次commit合并成一个后再rebase">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git-rebase.md">
+<meta property="og:url" content="http://example.com/2022/11/09/git-rebase-md/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Enjoy Life!">
+<meta property="og:description" content="issue:  执行git pull origin master --rebase后发生冲突，开始解冲突，发现写的很多代码都没了。  reason:  rebase是一个一个commit执行的，前面的commit会有一些代码没有，正常现象  解决: git rebase --abort退出，可完全回到rebase之前的状态，即使没解完冲突也没关系。 将多次commit合并成一个后再rebase">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-09T07:58:35.000Z">
+<meta property="article:modified_time" content="2022-11-09T08:02:31.310Z">
 <meta property="article:author" content="Hayden">
+<meta property="article:tag" content="git">
+<meta property="article:tag" content="rebase">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/tags/%E4%BF%AE%E6%94%B9/">
+<link rel="canonical" href="http://example.com/2022/11/09/git-rebase-md/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":"","permalink":"","path":"tags/修改/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/11/09/git-rebase-md/","path":"2022/11/09/git-rebase-md/","title":"git-rebase.md"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Tag: 修改 | Hexo</title>
+<title>git-rebase.md | Hexo</title>
   
 
 
@@ -157,50 +161,123 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">修改
-          <small>Tag</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/09/git-rebase-md/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hayden">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="Enjoy Life!">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="git-rebase.md | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          git-rebase.md
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="Created: 2022-11-09 15:58:35 / Modified: 16:02:31" itemprop="dateCreated datePublished" datetime="2022-11-09T15:58:35+08:00">2022-11-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <ol>
+<li>issue:</li>
+</ol>
+<p>执行<code>git pull origin master --rebase</code>后发生冲突，开始解冲突，发现写的很多代码都没了。</p>
+<ol start="2">
+<li>reason:</li>
+</ol>
+<p>rebase是一个一个commit执行的，前面的commit会有一些代码没有，正常现象</p>
+<ol start="3">
+<li>解决:<ol>
+<li><code>git rebase --abort</code>退出，可完全回到rebase之前的状态，即使没解完冲突也没关系。</li>
+<li>将多次commit合并成一个后再rebase</li>
+</ol>
+</li>
+</ol>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-10-05T11:36:36+08:00"
-              content="2022-10-05">
-          10-05
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/10/05/git%E4%BF%AE%E6%94%B9%E5%8E%86%E5%8F%B2commit-md/" itemprop="url">
-            <span itemprop="name">git修改历史commit.md</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/git/" rel="tag"># git</a>
+              <a href="/tags/rebase/" rel="tag"># rebase</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/10/06/hello-world/" rel="prev" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
+
 
 </div>
   </main>
