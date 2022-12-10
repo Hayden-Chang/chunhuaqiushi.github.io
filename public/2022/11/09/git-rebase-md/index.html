@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="issue:  执行git pull origin master --rebase后发生冲突，开始解冲突，发现写的很多代码都没了。  reason:  rebase是一个一个commit执行的，前面的commit会有一些代码没有，正常现象  解决: git rebase --abort退出，可完全回到rebase之前的状态，即使没解完冲突也没关系。 将多次commit合并成一个后再rebase">
+    <meta name="description" content="0.1 Steps git pull origin master --rebase 遇到第一个冲突，解决第一个冲突 解决完后git add . git rebase --continue 循环执行2-3-4 完成  0.2 Issues: 执行git pull origin master --rebase后发生冲突，开始解冲突，发现写的很多代码都没了。  reason:  rebase是一个一个c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git-rebase.md">
 <meta property="og:url" content="http://example.com/2022/11/09/git-rebase-md/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="issue:  执行git pull origin master --rebase后发生冲突，开始解冲突，发现写的很多代码都没了。  reason:  rebase是一个一个commit执行的，前面的commit会有一些代码没有，正常现象  解决: git rebase --abort退出，可完全回到rebase之前的状态，即使没解完冲突也没关系。 将多次commit合并成一个后再rebase">
+<meta property="og:description" content="0.1 Steps git pull origin master --rebase 遇到第一个冲突，解决第一个冲突 解决完后git add . git rebase --continue 循环执行2-3-4 完成  0.2 Issues: 执行git pull origin master --rebase后发生冲突，开始解冲突，发现写的很多代码都没了。  reason:  rebase是一个一个c">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-11-09T07:58:35.000Z">
-<meta property="article:modified_time" content="2022-11-09T08:02:31.310Z">
+<meta property="article:modified_time" content="2022-11-09T09:30:10.150Z">
 <meta property="article:author" content="Hayden">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="rebase">
@@ -97,7 +97,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -110,6 +110,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Steps"><span class="nav-text">0.1 Steps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Issues"><span class="nav-text">0.2 Issues:</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -202,7 +203,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-11-09 15:58:35 / Modified: 16:02:31" itemprop="dateCreated datePublished" datetime="2022-11-09T15:58:35+08:00">2022-11-09</time>
+      <time title="Created: 2022-11-09 15:58:35 / Modified: 17:30:10" itemprop="dateCreated datePublished" datetime="2022-11-09T15:58:35+08:00">2022-11-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -231,18 +232,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <ol>
-<li>issue:</li>
+        <h2 id="Steps">0.1 Steps</h2><ol>
+<li><code>git pull origin master --rebase</code></li>
+<li>遇到第一个冲突，解决第一个冲突</li>
+<li>解决完后<code>git add .</code></li>
+<li><code>git rebase --continue</code></li>
+<li>循环执行2-3-4</li>
+<li>完成</li>
 </ol>
-<p>执行<code>git pull origin master --rebase</code>后发生冲突，开始解冲突，发现写的很多代码都没了。</p>
-<ol start="2">
-<li>reason:</li>
-</ol>
-<p>rebase是一个一个commit执行的，前面的commit会有一些代码没有，正常现象</p>
-<ol start="3">
-<li>解决:<ol>
+<h2 id="Issues">0.2 Issues:</h2><ol>
+<li><p>执行<code>git pull origin master --rebase</code>后发生冲突，开始解冲突，发现写的很多代码都没了。</p>
+<ol>
+<li><p>reason:<br>  rebase是一个一个commit执行的，前面的commit会有一些代码没有，正常现象</p>
+</li>
+<li><p>解决:</p>
+<ol>
 <li><code>git rebase --abort</code>退出，可完全回到rebase之前的状态，即使没解完冲突也没关系。</li>
-<li>将多次commit合并成一个后再rebase</li>
+<li>将多次commit合并成一个后再rebase: <blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.w3docs.com/snippets/git/how-to-combine-multiple-commits-into-one-with-3-steps.html#running-git-rebase-in-interactive-mode-4">https://www.w3docs.com/snippets/git/how-to-combine-multiple-commits-into-one-with-3-steps.html#running-git-rebase-in-interactive-mode-4</a></p>
+</blockquote>
+</li>
+</ol>
+</li>
 </ol>
 </li>
 </ol>
