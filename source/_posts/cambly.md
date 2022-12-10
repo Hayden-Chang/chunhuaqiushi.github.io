@@ -87,3 +87,27 @@ new
 - descendants 后代
     - Half of population in Guyana are descendants from Africa and other half from India.
 
+2022年10月26日
+
+- coworker 同事
+- concrete 混凝土
+- snack 零食
+- subsidized meals 补贴惨
+- I will discuss this demand with my mentor.
+- We will have a dinner in a hotal this Friday.
+- My girl friend and me will fly a kite this weekend.
+- I work at .. I work for
+- I have to be very condd about the word that IO muse beacuse ....
+
+2022年10月27日
+
+- tennis 网球
+- I have a problem with my knees
+- several years ago
+- rugby 橄榄球
+- cheer
+- once every two days
+- Let's shoot for perfection. 
+    - shoot = aim for
+- breast stroke 蛙泳
+
