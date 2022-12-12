@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="git rebase [branch-name]&#x2F;[commit-id]   将当前分支rebase到xxx分支上，head仍然指向的是当前分支。  也可以直接rebase到某次commit上  疑问  head指向的哪一个commit?     git checkout  git checkout commit-id&#x2F;branch-name     head 直接指向commit-id，或">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git.md">
+<meta property="og:url" content="http://example.com/2022/10/01/git-md/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="git rebase [branch-name]&#x2F;[commit-id]   将当前分支rebase到xxx分支上，head仍然指向的是当前分支。  也可以直接rebase到某次commit上  疑问  head指向的哪一个commit?     git checkout  git checkout commit-id&#x2F;branch-name     head 直接指向commit-id，或">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-10-01T14:08:28.000Z">
+<meta property="article:modified_time" content="2022-10-05T03:36:22.581Z">
+<meta property="article:author" content="Hayden">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2022/10/01/git-md/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/10/01/git-md/","path":"2022/10/01/git-md/","title":"git.md"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>git.md | Hexo</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hayden</p>
+  <div class="site-description" itemprop="description">Enjoy Life!</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/01/git-md/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hayden">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="Enjoy Life!">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="git.md | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          git.md
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-10-01 22:08:28" itemprop="dateCreated datePublished" datetime="2022-10-01T22:08:28+08:00">2022-10-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-10-05 11:36:22" itemprop="dateModified" datetime="2022-10-05T11:36:22+08:00">2022-10-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <ul>
+<li><p><code>git rebase [branch-name]/[commit-id] </code></p>
+<ul>
+<li><p>将当前分支rebase到xxx分支上，head仍然指向的是当前分支。</p>
+</li>
+<li><p>也可以直接rebase到某次commit上</p>
+</li>
+<li><p>疑问</p>
+<ul>
+<li>head指向的哪一个commit?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>git checkout</code></p>
+<ul>
+<li><code>git checkout commit-id/branch-name </code></li>
+</ul>
+<p>  head 直接指向commit-id，或</p>
+<ul>
+<li><code>git checkout branch-name^ </code></li>
+</ul>
+<p>  切换到branch-name分支最新commit的父节点</p>
+<ul>
+<li><code>git checkout branch-name^^ </code></li>
+</ul>
+<p>  切换到branch-name分支最新commit的父父节点</p>
+</li>
+<li><p><code>git branch -f [branch-name] [commit-id]</code></p>
+<ul>
+<li>将某个branch-name指向某次commit-id</li>
+</ul>
+</li>
+<li><p><code>git reset [commit-id]</code></p>
+<ul>
+<li>将当前分支指向某个commit</li>
+</ul>
+</li>
+<li><p><code>git revert [commit-id]</code></p>
+<ul>
+<li>回退某次commit-id</li>
+</ul>
+</li>
+<li><p><code>git rebase -i [commit-id]</code></p>
+<ul>
+<li>以交互式的方式将当前分支rebase到某次提交上</li>
+</ul>
+</li>
+<li><p><code>git cherry-pick [commit-id-1] [commit-id-2] ......</code></p>
+<ul>
+<li>在当前分支下面加入commit-id-1和commit-id-2</li>
+</ul>
+</li>
+<li><p><code>git commit -amend</code></p>
+<ul>
+<li>在当前的commit-id中进行一些修改，合并到当前的commit-id中</li>
+</ul>
+</li>
+<li><p><code>git tag [tag-name] [commit-id]</code></p>
+<ul>
+<li>给某个commit打标签，可以使用<code>git checkout [tag-name]</code>切换到某个标签上</li>
+</ul>
+</li>
+<li><p><code>git fetch</code></p>
+<ul>
+<li>更新本地的远程分支</li>
+</ul>
+</li>
+<li><p><code>git pull</code></p>
+<ul>
+<li>等价于<code>git fetch</code> + <code>git merge</code></li>
+</ul>
+</li>
+<li><p><code>git pull --rebase</code></p>
+<ul>
+<li>等价于<code>git fetch</code> + <code>git rebase</code></li>
+</ul>
+</li>
+<li><p><code>git checkout -b [branch-name] [origin-branch-name] </code></p>
+<ul>
+<li>跟踪远程分支</li>
+</ul>
+</li>
+<li><p><code>git branch -u [origin-branch-name]  [branch-name]</code></p>
+<ul>
+<li>跟踪远程分支</li>
+</ul>
+</li>
+<li><p><code>git push origin [branch-name]</code></p>
+<ul>
+<li>将branch-name的commit推送到远程仓库，同时指定了提交记录的来源和去向</li>
+</ul>
+</li>
+<li><p><code>git push origin [source]:[destination]</code></p>
+<ul>
+<li>将本地源分支推送到目的远程分支</li>
+<li>tip: source是本地的，destination是远程的</li>
+</ul>
+</li>
+<li><p><code>git fetch origin [source]:[destination]</code></p>
+<ul>
+<li>将远程分支的提交下载到本地分支</li>
+<li>tip: source是远程的，destination是本地的</li>
+<li><code>git fetch origin :[destination]</code><ul>
+<li>在本地新建destination分支</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>git pull origin [source]:[destination]</code></p>
+<ul>
+<li>相当于两步操作：<code>git fetch origin [source]:[destination]</code> + <code>git merge [destination]</code></li>
+</ul>
+</li>
+<li><p>！！！危险操作</p>
+<ul>
+<li><code>git push origin :foo</code><ul>
+<li>删除远程的foo分支</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/git/" rel="tag"># git</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/09/24/%E8%80%81%E5%8F%8B%E8%AE%B0%E8%AF%8D%E6%B1%87-1-1-md/" rel="prev" title="老友记词汇_1_1.md">
+                  <i class="fa fa-chevron-left"></i> 老友记词汇_1_1.md
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/10/04/hello-world/" rel="next" title="Hello World">
+                  Hello World <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hayden</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
